@@ -32,7 +32,7 @@
 
 // 3 - Ménage
 //
-const laundry = () => {
+const doLaundry = () => {
     return new Promise ( (resolve, reject) => {
         console.log("Je commence la lessive")
         setTimeout ( () => {
@@ -48,11 +48,11 @@ const cleanDishes = () => {
         }, 1500)
     })
 }
-const waitForResult = async () => {
-    let result = await laundry()
+const cleanUp = async () => {
+    let result = await doLaundry()
     console.log(result)
     result = await cleanDishes()
     console.log(result)
     console.log("j'ai fini de faire le ménage")
 }
-waitForResult()
+cleanUp()
